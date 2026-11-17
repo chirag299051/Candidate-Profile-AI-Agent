@@ -117,7 +117,9 @@ function Chat() {
                   <div className="chat-source" key={sourceIndex}>
                     <strong>{source.section}</strong>
                     <p>{source.content}</p>
-                    <small>Similarity: {source.score.toFixed(4)}</small>
+                    {source.score !== null && source.score !== undefined && (
+  <small>Similarity: {source.score.toFixed(4)}</small>
+)}
                   </div>
                 ))}
               </details>
