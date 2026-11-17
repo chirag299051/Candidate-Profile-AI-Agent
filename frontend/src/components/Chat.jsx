@@ -118,7 +118,7 @@ function Chat() {
                     <strong>{source.section}</strong>
                     <p>{source.content}</p>
                     {source.score !== null && source.score !== undefined && (
-  <small>Similarity: {source.score.toFixed(4)}</small>
+  <small>Similarity: {source.score}</small>
 )}
                   </div>
                 ))}
