@@ -16,6 +16,8 @@ import passwordResetRoutes from "./routes/passwordReset.routes.js";
 import conversationRoutes from "./routes/conversation.routes.js";
 import { requireAuth } from "./middleware/authMiddleware.js";
 const app = express();
+app.set("trust proxy", 1);
+
 const PORT = process.env.PORT || 5050;
 app.use(
   cors({
@@ -39,8 +41,8 @@ app.use(
     }),
     cookie: {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 14 * 24 * 60 * 60 * 1000,
     },
   }),
