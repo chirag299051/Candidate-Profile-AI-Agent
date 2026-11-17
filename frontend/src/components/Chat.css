@@ -62,3 +62,17 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+.markdown-content p {
+  margin-bottom: 8px;
+}
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+.markdown-content strong {
+  font-weight: 700;
+}
+.markdown-content > :last-child {
+  margin-bottom: 0;
+}

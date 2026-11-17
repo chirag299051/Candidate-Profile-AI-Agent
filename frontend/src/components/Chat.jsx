@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import api from "../services/api";
+import ReactMarkdown from "react-markdown";
 import "./Chat.css";
 function Chat() {
   const [question, setQuestion] = useState("");
@@ -104,7 +105,11 @@ function Chat() {
         {messages.map((message, index) => (
           <div className={`chat-message ${message.role}`} key={index}>
             <strong>{message.role === "user" ? "You" : "AI Assistant"}</strong>
-            <p>{message.content}</p>
+            <div className="markdown-content">
+  <ReactMarkdown>
+    {message.content?.replace(/\\([*_`])/g, "$1")}
+  </ReactMarkdown>
+</div>
             {message.sources?.length > 0 && (
               <details>
                 <summary>View sources ({message.sources.length})</summary>
