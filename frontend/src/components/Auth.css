@@ -1,0 +1,133 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #080b14;
+  color: #fff;
+}
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+.auth-card h1 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.auth-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 28px;
+}
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.auth-tabs button {
+  flex: 1;
+  padding: 11px;
+  color: #9ca3af;
+  background: #1f2937;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.auth-tabs button.active {
+  color: white;
+  background: #263b59;
+  border-color: #3b82f6;
+}
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.auth-card input {
+  width: 100%;
+  padding: 13px;
+  color: white;
+  background: #080b14;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+.auth-card input:focus {
+  border-color: #3b82f6;
+}
+.auth-submit,
+.google-button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.auth-submit {
+  color: white;
+  background: #2563eb;
+  border: none;
+}
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #374151;
+}
+.google-button {
+  color: white;
+  background: transparent;
+  border: 1px solid #4b5563;
+}
+.google-button:hover {
+  background: #1f2937;
+}
+.auth-error {
+  padding: 10px;
+  color: #fecaca;
+  background: rgba(220, 38, 38, 0.12);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-text-button {
+  display: block;
+  margin: 16px auto 0;
+  padding: 5px;
+  color: #60a5fa;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.auth-text-button:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+.auth-success {
+  padding: 10px;
+  color: #bbf7d0;
+  background: rgba(22, 163, 74, 0.12);
+  border-radius: 6px;
+  font-size: 14px;
+}
